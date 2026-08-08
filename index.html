@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrimeCodeWeb | Sites Profissionais</title>
+
+    <meta name="description"
+        content="Criação de sites profissionais, rápidos e responsivos para empresas que querem crescer na internet.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        span {
+            color: #1683ff;
+        }
+
+        /* HEADER */
+
+        header {
+            min-height: 100vh;
+            padding: 30px 8%;
+            display: flex;
+            flex-direction: column;
+
+            background:
+                radial-gradient(circle at 70% 30%,
+                    rgba(0, 102, 255, 0.16),
+                    transparent 35%),
+                #050505;
+        }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #1683ff;
+        }
+
+        .btn-topo {
+            padding: 12px 22px;
+            border: 1px solid #1683ff;
+            border-radius: 8px;
+
+            transition: .3s;
+        }
+
+        .btn-topo:hover {
+            background: #1683ff;
+        }
+
+        /* HERO */
+
+        .hero {
+            flex: 1;
+
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+
+            align-items: center;
+            gap: 60px;
+
+            padding: 70px 0;
+        }
+
+        .hero-texto .tag {
+            color: #1683ff;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero-texto h1 {
+            font-size: clamp(44px, 6vw, 78px);
+            line-height: 1.03;
+
+            margin: 18px 0 25px;
+        }
+
+        .hero-texto p {
+            max-width: 620px;
+
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-botoes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            margin-top: 35px;
+        }
+
+        .btn-principal,
+        .btn-secundario {
+            display: inline-block;
+
+            padding: 16px 28px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .btn-principal {
+            background: #1683ff;
+        }
+
+        .btn-principal:hover {
+            background: #0069df;
+            transform: translateY(-3px);
+        }
+
+        .btn-secundario {
+            border: 1px solid #333;
+            background: #0d0d0d;
+        }
+
+        .btn-secundario:hover {
+            border-color: #1683ff;
+        }
+
+        /* MOCKUP */
+
+        .mockup {
+            position: relative;
+
+            min-height: 460px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .janela-site {
+            width: 100%;
+            max-width: 530px;
+
+            background: #0c0c0c;
+
+            border: 1px solid #202020;
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 40px 100px rgba(0, 0, 0, .8),
+                0 0 70px rgba(22, 131, 255, .12);
+
+            transform: rotateY(-7deg) rotateX(2deg);
+        }
+
+        .janela-topo {
+            height: 45px;
+            background: #151515;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 0 15px;
+        }
+
+        .bolinha {
+            width: 10px;
+            height: 10px;
+
+            border-radius: 50%;
+            background: #444;
+        }
+
+        .site-preview {
+            padding: 45px 35px;
+            min-height: 330px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 102, 255, .12),
+                    transparent
+                ),
+                #080808;
+        }
+
+        .site-preview small {
+            color: #1683ff;
+        }
+
+        .site-preview h2 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .site-preview p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .site-preview button {
+            margin-top: 25px;
+
+            padding: 12px 20px;
+
+            border: none;
+            border-radius: 6px;
+
+            background: #1683ff;
+            color: white;
+
+            font-weight: bold;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .titulo-secao {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .titulo-secao small {
+            color: #1683ff;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .titulo-secao h2 {
+            font-size: clamp(34px, 5vw, 52px);
+            margin-top: 12px;
+        }
+
+        .titulo-secao p {
+            margin-top: 15px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* BENEFÍCIOS */
+
+        .beneficios {
+            background: #080808;
+        }
+
+        .grid-beneficios {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background: #0d0d0d;
+
+            border: 1px solid #191919;
+            border-radius: 14px;
+
+            padding: 32px;
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            border-color: #1683ff;
+
+            box-shadow:
+                0 15px 50px rgba(22, 131, 255, .08);
+        }
+
+        .icone {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: rgba(22, 131, 255, .12);
+            color: #1683ff;
+
+            font-size: 24px;
+
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* COMO FUNCIONA */
+
+        .passos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .passo {
+            position: relative;
+
+            padding: 30px;
+
+            border-left: 2px solid #1683ff;
+
+            background: #090909;
+        }
+
+        .numero {
+            font-size: 48px;
+            font-weight: 900;
+
+            color: rgba(22, 131, 255, .18);
+        }
+
+        .passo h3 {
+            margin: 10px 0;
+        }
+
+        .passo p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+
+            background:
+                radial-gradient(circle,
+                    rgba(0, 102, 255, .16),
+                    transparent 55%),
+                #070707;
+        }
+
+        .cta-conteudo {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .cta h2 {
+            font-size: clamp(38px, 6vw, 64px);
+        }
+
+        .cta p {
+            color: #aaa;
+            font-size: 18px;
+
+            max-width: 650px;
+            margin: 25px auto 35px;
+
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 8%;
+
+            border-top: 1px solid #151515;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #777;
+        }
+
+        /* WHATSAPP FIXO */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+
+            background: #25d366;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 28px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, .5);
+
+            z-index: 100;
+
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 950px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .mockup {
+                min-height: auto;
+            }
+
+            .grid-beneficios,
+            .passos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            header,
+            section {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .btn-topo {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 90px;
+            }
+
+            .hero-texto h1 {
+                font-size: 43px;
+            }
+
+            .hero-texto p {
+                font-size: 16px;
+            }
+
+            .grid-beneficios,
+            .passos {
+                grid-template-columns: 1fr;
+            }
+
+            .janela-site {
+                transform: none;
+            }
+
+            .site-preview h2 {
+                font-size: 29px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<header>
+
+    <div class="topo">
+
+        <div class="logo">
+            PRIME<span>CODE</span>WEB
+        </div>
+
+        <a href="#contato" class="btn-topo">
+            Solicitar orçamento
+        </a>
+
+    </div>
+
+
+    <div class="hero">
+
+        <div class="hero-texto">
+
+            <div class="tag">
+                DESENVOLVIMENTO WEB
+            </div>
+
+            <h1>
+                Seu negócio merece
+                um <span>site profissional.</span>
+            </h1>
+
+            <p>
+                Desenvolvemos sites modernos, rápidos e responsivos
+                para empresas que querem transmitir mais credibilidade,
+                alcançar novos clientes e crescer na internet.
+            </p>
+
+
+            <div class="hero-botoes">
+
+                <a
+                    href="#contato"
+                    class="btn-principal"
+                >
+                    Quero meu site
+                </a>
+
+                <a
+                    href="#servicos"
+                    class="btn-secundario"
+                >
+                    Conhecer serviços
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="mockup">
+
+            <div class="janela-site">
+
+                <div class="janela-topo">
+
+                    <div class="bolinha"></div>
+                    <div class="bolinha"></div>
+                    <div class="bolinha"></div>
+
+                </div>
+
+                <div class="site-preview">
+
+                    <small>
+                        SUA EMPRESA
+                    </small>
+
+                    <h2>
+                        Transforme visitantes
+                        em clientes.
+                    </h2>
+
+                    <p>
+                        Uma presença digital profissional
+                        começa com um site que representa
+                        verdadeiramente a sua empresa.
+                    </p>
+
+                    <button>
+                        Entrar em contato
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<section
+    class="beneficios"
+    id="servicos"
+>
+
+    <div class="titulo-secao">
+
+        <small>
+            POR QUE TER UM SITE?
+        </small>
+
+        <h2>
+            Mais do que aparência.
+            <span>Uma ferramenta para crescer.</span>
+        </h2>
+
+        <p>
+            Seu site trabalha pela sua empresa todos os dias,
+            apresentando seus serviços e facilitando o contato
+            de possíveis clientes.
+        </p>
+
+    </div>
+
+
+    <div class="grid-beneficios">
+
+        <div class="card">
+
+            <div class="icone">
+                ⚡
+            </div>
+
+            <h3>
+                Alta performance
+            </h3>
+
+            <p>
+                Sites leves e rápidos para oferecer
+                uma experiência profissional ao visitante.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">
+                ◉
+            </div>
+
+            <h3>
+                Design responsivo
+            </h3>
+
+            <p>
+                Seu site funcionando perfeitamente
+                em celulares, tablets e computadores.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">
+                ↗
+            </div>
+
+            <h3>
+                Mais credibilidade
+            </h3>
+
+            <p>
+                Uma presença profissional aumenta
+                a confiança de quem conhece sua empresa.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">
+                ✓
+            </div>
+
+            <h3>
+                Contato facilitado
+            </h3>
+
+            <p>
+                Integração com WhatsApp e formas rápidas
+                do cliente falar com sua empresa.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section>
+
+    <div class="titulo-secao">
+
+        <small>
+            PROCESSO
+        </small>
+
+        <h2>
+            Do primeiro contato
+            ao <span>site no ar.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="passos">
+
+        <div class="passo">
+
+            <div class="numero">
+                01
+            </div>
+
+            <h3>
+                Entendimento
+            </h3>
+
+            <p>
+                Conhecemos sua empresa,
+                seus serviços e seus objetivos.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">
+                02
+            </div>
+
+            <h3>
+                Planejamento
+            </h3>
+
+            <p>
+                Definimos estrutura,
+                conteúdo e visual do projeto.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">
+                03
+            </div>
+
+            <h3>
+                Desenvolvimento
+            </h3>
+
+            <p>
+                Transformamos o planejamento
+                em um site rápido e responsivo.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">
+                04
+            </div>
+
+            <h3>
+                Publicação
+            </h3>
+
+            <p>
+                Depois dos testes e aprovação,
+                seu site está pronto para ir ao ar.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section
+    class="cta"
+    id="contato"
+>
+
+    <div class="cta-conteudo">
+
+        <small style="
+            color:#1683ff;
+            letter-spacing:3px;
+            font-weight:bold;
+        ">
+            VAMOS COMEÇAR?
+        </small>
+
+        <h2>
+            Sua empresa pode ser
+            o nosso <span>próximo projeto.</span>
+        </h2>
+
+        <p>
+            Conte um pouco sobre sua empresa e receba
+            uma proposta para desenvolver seu site profissional.
+        </p>
+
+        <a
+            href="https://www.instagram.com/primecodeweb/"
+            target="_blank"
+            class="btn-principal"
+        >
+            Solicitar orçamento
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="logo">
+        PRIME<span>CODE</span>WEB
+    </div>
+
+    <p>
+        Desenvolvimento web com foco em resultados.
+    </p>
+
+</footer>
+
+
+<!-- BOTÃO WHATSAPP -->
+
+<a
+    href="https://wa.me/55SEUNUMERO"
+    target="_blank"
+    class="whatsapp"
+    aria-label="WhatsApp"
+>
+    ☏
+</a>
+
+</body>
+</html>
+</body>
+</html>
